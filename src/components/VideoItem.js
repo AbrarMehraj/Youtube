@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { selectedVideo } from "../actions";
 
 function VideoItem({ video, selectedVideo }) {
-  console.log(video);
-  console.log(selectedVideo);
+  // console.log(video);
+  // console.log(selectedVideo);
 
   const imageUrl = video.snippet.thumbnails.default.url;
   const title = video.snippet.title;

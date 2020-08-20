@@ -27,6 +27,7 @@ class SearchBar extends Component {
 
   onSubmit = ({ Input }) => {
     this.onInputSubmit(Input);
+    console.log(Input);
   };
 
   render() {
@@ -34,7 +35,7 @@ class SearchBar extends Component {
     return (
       <div className="search-bar">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-          <Field nam e="Input" component={this.renderInput} />
+          <Field name="Input" component={this.renderInput} />
           <button>Search</button>
         </form>
         {/* {this.props.videos.length} */}
