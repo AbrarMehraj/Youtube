@@ -3,7 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
 import YTSearch from "youtube-api-search";
 import { Videos, selectedVideo } from "../actions";
-
+import "./style.css";
 const API_KEY = "AIzaSyAM0PMymJsVy-jVLtkuswdUlYTp7EQ3GVk";
 
 class SearchBar extends Component {
@@ -32,9 +32,9 @@ class SearchBar extends Component {
   render() {
     // console.log(this.props);
     return (
-      <div>
+      <div className="search-bar">
         <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-          <Field name="Input" component={this.renderInput} />
+          <Field nam e="Input" component={this.renderInput} />
           <button>Search</button>
         </form>
         {/* {this.props.videos.length} */}

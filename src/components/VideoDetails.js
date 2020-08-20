@@ -12,13 +12,17 @@ function VideoDetails({ Video }) {
 
   console.log(Video);
   return (
-    <div>
-      <div>
-        <iframe title="myframe" src={url}></iframe>
+    <div className="video-detail col-md-8">
+      <div className="embed-responsive embed-responsive-16by9">
+        <iframe
+          className="embed-responsive-item"
+          title="myframe"
+          src={url}
+        ></iframe>
       </div>
-      <div>
+      <div className="details">
         <div>{Video.snippet.title}</div>
-        <div>{Video.snippet.description}</div>
+        {/* <div className="details-des">{Video.snippet.description}</div> */}
       </div>
     </div>
   );

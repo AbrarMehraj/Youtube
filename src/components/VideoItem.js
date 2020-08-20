@@ -11,20 +11,24 @@ function VideoItem({ video, selectedVideo }) {
   // const description = video.snippet.description;
 
   return (
-    <div>
+    <li className="list-group-item">
       <div
+        className="video-list media"
         onClick={() => {
           selectedVideo(video);
         }}
       >
-        <img src={imageUrl} alt="Failed to fetch" />
-      </div>
+        <div className="media-left">
+          <img src={imageUrl} alt="Failed to fetch" className="media-object" />
+        </div>
 
-      <div>
-        <div>{title}</div>
-        {/* <div>{description}</div> */}
+        <div className="media-body">
+          <div className="media-heading" style={{ marginLeft: "1rem" }}>
+            {title}
+          </div>
+        </div>
       </div>
-    </div>
+    </li>
   );
 }
 

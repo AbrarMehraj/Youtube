@@ -12,7 +12,7 @@ class VideoList extends Component {
 
   render() {
     // console.log(this.props);
-    return <div>{this.renderVideoList()}</div>;
+    return <ul className="col-md-4 list-group">{this.renderVideoList()}</ul>;
   }
 }
 
